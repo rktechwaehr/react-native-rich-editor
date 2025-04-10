@@ -141,7 +141,7 @@
             },
 
             init() {
-                webview.contentWindow.addEventListener('click', () => this.focusContentEditor(), false)
+                // webview.contentWindow.addEventListener('click', () => this.focusContentEditor(), false)
                 webview.contentWindow.document.body.addEventListener('click', (event) => event.stopPropagation(), false)
                 editor.setContentHTML(initHTML);
             },
