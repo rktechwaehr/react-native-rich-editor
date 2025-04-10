@@ -78,7 +78,7 @@ export default class RichTextEditor extends Component {
             enterKeyHint,
             autoCapitalize,
             autoCorrect,
-            initialFocus: initialFocus && !disabled,
+            initialFocus: initialFocus ,
             defaultParagraphSeparator,
             firstFocusEnd,
             useContainer,
@@ -445,7 +445,7 @@ export default class RichTextEditor extends Component {
     editorInitializedCallback();
 
     // initial request focus
-    initialFocus && !disabled && that.focusContentEditor();
+    initialFocus && that.focusContentEditor();
     // no visible ?
     that.sendAction(actions.init);
   }
