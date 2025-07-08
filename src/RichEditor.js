@@ -445,7 +445,7 @@ export default class RichTextEditor extends Component {
     editorInitializedCallback();
 
     // initial request focus
-    initialFocus && that.focusContentEditor();
+    // initialFocus && that.focusContentEditor();
     // no visible ?
     that.sendAction(actions.init);
   }
