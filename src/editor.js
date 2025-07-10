@@ -354,6 +354,11 @@ function createHTML(options = {}) {
                     var url = data.url || window.prompt('Enter the link URL');
 
                     if (url) {
+                        let href = url
+                        if (${defaultHttps} && !href.startsWith("http")) {
+                            href = "https://" + href
+                        }
+
                         var el = document.createElement("a");
                         el.setAttribute("href", url);
 
@@ -395,6 +400,8 @@ function createHTML(options = {}) {
             image: {
                 result: function(url, style) {
                     if (url){
+                        // This is needed, or the image will not be inserted if the html is empty
+                        exec('insertHTML', "<br/>");
                         exec('insertHTML', "<img style='"+ (style || '')+"' src='"+ url +"'/>");
                         Actions.UPDATE_HEIGHT();
                     }
@@ -477,8 +484,8 @@ function createHTML(options = {}) {
 
             init: function (){
                 if (${useContainer}){
-                    // setInterval(Actions.UPDATE_HEIGHT, 150);
-                    Actions.UPDATE_HEIGHT();
+                    setInterval(Actions.UPDATE_HEIGHT, 150);
+                    // Actions.UPDATE_HEIGHT();
                 } else {
                     // react-native-webview There is a bug in the body and html height setting of a certain version of 100%
                     // body.style.height = docEle.clientHeight + 'px';
