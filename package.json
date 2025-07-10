@@ -1,17 +1,17 @@
 {
-  "name": "@shreyash/react-native-pell-rich-editor",
+  "name": "@rktech/react-native-pell-rich-editor",
   "description": "React Native Rich Editor",
-  "version": "1.9.1",
+  "version": "1.0.0",
   "main": "src/index.js",
   "license": "MIT",
   "private": false,
   "author": {
-    "name": "wxik",
-    "email": "io@wxik.com"
+    "name": "RKT",
+    "email": "rktech@w.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wxik/react-native-rich-editor.git"
+    "url": "https://github.com/rktechwaehr/react-native-rich-editor.git"
   },
   "dependencies": {
   },
