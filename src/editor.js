@@ -354,11 +354,6 @@ function createHTML(options = {}) {
                     var url = data.url || window.prompt('Enter the link URL');
 
                     if (url) {
-                        let href = url
-                        if (${defaultHttps} && !href.startsWith("http")) {
-                            href = "https://" + href
-                        }
-
                         var el = document.createElement("a");
                         el.setAttribute("href", url);
 
